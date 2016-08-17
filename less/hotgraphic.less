@@ -114,7 +114,7 @@
 		padding: @item-padding;
 	}
 
-	.hotgraphic-item-graphic {
+	.hotgraphic-item-iframe {
 		width: 50%;
 		float: right;
 		.dir-rtl & {
@@ -123,8 +123,14 @@
 		text-align: center;
 	}
 
-	.hotgraphic-item-graphic-inner{
+	.hotgraphic-item-hotgraphic-holder {
 		padding-left: @item-padding-left;
+
+		iframe {
+			height: 1200px;
+			width: 600px;
+		}
+				
 		.dir-rtl & {
 			padding-left: inherit;
 			padding-right: @item-padding-left;
@@ -133,6 +139,7 @@
 
 	.hotgraphic-item-content {
 		width: 50%;
+
 		float: left;
 		.dir-rtl & {
 			float: right;

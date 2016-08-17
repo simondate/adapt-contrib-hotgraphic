@@ -27,11 +27,14 @@
         </div>
 
         <div class="hotgraphic-popup-inner clearfix">
-          {{#each _items}}
+          {{#each _items}} 
           <div class="hotgraphic-item component-item item-{{@index}} {{_classes}}">
-            <div class="hotgraphic-item-graphic">
-              <div class="hotgraphic-item-graphic-inner">
-                <img src="{{_graphic.src}}" aria-label="{{_graphic.alt}}" tabindex="0"/>
+            <div class="hotgraphic-item-iframe"> 
+              <div class="hotgraphic-iframe-holder">
+                <iframe scrolling="{{#if _scrolling}}{{_scrolling}}{{else}}no{{/if}}" class="responsiveIframe-iframe" src={{_graphic.src}}
+                  data-height-large="{{_height._large}}" data-height-medium="{{_height._medium}}" data-height-small="{{_height._small}}"
+                  data-width-large="{{_width._large}}" data-width-medium="{{_width._medium}}" data-width-small="{{_width._small}}">
+                </iframe>
               </div>
             </div>
             <div class="hotgraphic-item-content">
